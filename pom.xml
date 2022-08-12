@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.demo</groupId>
-	<artifactId>nexthouse</artifactId>
+	<artifactId>nexthouse-chat</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>nexthouse</name>
+	<name>nexthouse-chat</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
