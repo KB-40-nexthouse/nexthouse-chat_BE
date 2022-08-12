@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nexthouse
+  name: nexthouse-chat
   annotations:
     kubernetes.io/ingress.class: "nginx"
     #kubernetes.io/TLS-redirect: "false"
@@ -12,13 +12,13 @@ spec:
   #tls:
   #- secretName: tls-secret
   rules:
-  - host: "nexthouse.169.56.100.104.nip.io"
+  - host: "nexthouse-chat.169.56.100.104.nip.io"
     http:
       paths:
-      - path: /nexthouse
+      - path: /nexthouse-chat
         pathType: Prefix
         backend:
           service:
-            name: nexthouse
+            name: nexthouse-chat
             port:
-              number: 8888
+              number: 8889

@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: nexthouse-config
+  name: nexthouse-chat-config
 data:
-  SERVLET_CONTEXT_PATH: "/nexthouse"
+  SERVLET_CONTEXT_PATH: "/nexthouse-chat"
 # MYSQL DB
-  DB_SERVER: mysql-nexthouse
+  DB_SERVER: mysql-chat-nexthouse
   DB_PORT: "3306"
   DB_USERNAME: admin
   DB_PASSWORD: "960328"

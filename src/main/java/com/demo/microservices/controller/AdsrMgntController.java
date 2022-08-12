@@ -1,7 +1,7 @@
 package com.demo.microservices.controller;
 
 
-import java.util.List; 
+import java.util.List;  
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -13,10 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.microservices.dao.AdsrMgntDAO;
-import com.demo.microservices.dao.RentCntrMgntDAO;
 import com.demo.microservices.model.AdsrMgnt;
 import com.demo.microservices.model.AdsrSearch;
-import com.demo.microservices.model.RentCntr;
 
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

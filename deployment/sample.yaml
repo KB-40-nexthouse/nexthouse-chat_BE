@@ -1,48 +1,48 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nexthouse
+  name: nexthouse-chat
   labels:
-    app: nexthouse
+    app: nexthouse-chat
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: nexthouse
+      app: nexthouse-chat
   template:
     metadata:
       labels:
-        app: nexthouse
+        app: nexthouse-chat
     spec:
       containers:
-      - name: nexthouse
-        image: eastshine96/nexthouse:latest
+      - name: nexthouse-chat
+        image: eastshine96/nexthouse-chat:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8888
+        - containerPort: 8889
         env:
         - name: DB_SERVER
           valueFrom:
             configMapKeyRef:
-              name: nexthouse-config
+              name: nexthouse-chat-config
               key: DB_SERVER
         - name: DB_PORT
           valueFrom:
             configMapKeyRef:
-              name: nexthouse-config
+              name: nexthouse-chat-config
               key: DB_PORT
         - name: DB_USERNAME
           valueFrom:
             configMapKeyRef:
-              name: nexthouse-config
+              name: nexthouse-chat-config
               key: DB_USERNAME
         - name: DB_PASSWORD
           valueFrom:
             configMapKeyRef:
-              name: nexthouse-config
+              name: nexthouse-chat-config
               key: DB_PASSWORD
         - name: SERVLET_CONTEXT_PATH
           valueFrom:
             configMapKeyRef:
-              name: nexthouse-config
+              name: nexthouse-chat-config
               key: SERVLET_CONTEXT_PATH
