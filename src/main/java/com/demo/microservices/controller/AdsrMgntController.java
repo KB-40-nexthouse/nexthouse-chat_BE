@@ -34,7 +34,7 @@ public class AdsrMgntController {
 	String productPort;
 	
 	@ApiOperation(value="전체 상담이력 가져오기")
-	@CrossOrigin(originPatterns = "http://nexthouse-fe.kbfg.kubepia.com")
+	@CrossOrigin
 	@GetMapping(value="/adsrMsgAll/{custNo}")
 	public ResponseEntity <List<AdsrMgnt>> getselectAdsrAll(@PathVariable String custNo) { 
 		
@@ -55,7 +55,7 @@ public class AdsrMgntController {
 	}
 	
 	@ApiOperation(value="채팅 등록이후 상담이력 가져오기")
-	@CrossOrigin(originPatterns = "http://nexthouse-fe.kbfg.kubepia.com")
+	@CrossOrigin
 	@PostMapping(value="/inselAdsr")
 	public ResponseEntity <List<AdsrMgnt>> inselAdsr(@RequestBody AdsrMgnt adsrMgnt) { 
 		
@@ -82,7 +82,7 @@ public class AdsrMgntController {
 	}
 	
 	@ApiOperation(value="현재상담사조회")
-	@CrossOrigin(originPatterns = "http://nexthouse-fe.kbfg.kubepia.com")
+	@CrossOrigin
 	@GetMapping(value="/curAdsrSel/{custNo}")
 	public ResponseEntity <List<AdsrSearch>> getCurAdsr(@PathVariable String custNo) { 
 		
