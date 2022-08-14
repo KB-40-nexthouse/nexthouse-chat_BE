@@ -33,7 +33,7 @@ public class AdsrMgntController {
 	@Value("${garage.product.port}")
 	String productPort;
 	
-	@ApiOperation(value="전체 상담이력 가져오기")
+	@ApiOperation(value="유저 전체 상담이력 조회")
 	@CrossOrigin
 	@GetMapping(value="/adsrMsgAll/{custNo}")
 	public ResponseEntity <List<AdsrMgnt>> getselectAdsrAll(@PathVariable String custNo) { 
